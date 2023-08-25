@@ -33,7 +33,7 @@ function buildUserDataScript(label, githubRegistrationToken) {
 
 async function startInstance(label, githubRegistrationToken) {
   const ec2 = new AWS.EC2();
-  const userData = buildUserDataScript(githubRegistrationToken, label);
+  const userData = buildUserDataScript(label, githubRegistrationToken);
   const parameters = {
     ImageId: config.input.imageId,
     InstanceType: config.input.instanceType,
