@@ -1,6 +1,6 @@
+const _ = require('lodash');
 const core = require('@actions/core');
 const github = require('@actions/github');
-const _ = require('lodash');
 const config = require('./configuration');
 
 async function getRunner(label) {
@@ -32,7 +32,6 @@ async function removeRunner() {
   const runner = await getRunner(config.input.label);
   const octokit = github.getOctokit(config.input.githubToken);
 
-  // skip the runner removal process if the runner is not found
   if (!runner) {
     core.info(`GitHub self-hosted runner with label ${config.input.label} is not found, so the removal is skipped`);
     return;

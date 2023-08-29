@@ -5,15 +5,15 @@ class Configuration {
   constructor() {
     this.input = {
       mode: core.getInput('mode'),
-      githubToken: core.getInput('github-token'),
-      imageId: core.getInput('ec2-image-id'),
-      instanceType: core.getInput('ec2-instance-type'),
-      subnetId: core.getInput('subnet-id'),
-      securityGroupId: core.getInput('security-group-id'),
       label: core.getInput('label'),
+      imageId: core.getInput('ec2-image-id'),
+      subnetId: core.getInput('subnet-id'),
       instanceId: core.getInput('ec2-instance-id'),
       iamRoleName: core.getInput('iam-role-name'),
+      githubToken: core.getInput('github-token'),
+      instanceType: core.getInput('ec2-instance-type'),
       runnerHomeDir: core.getInput('runner-home-dir'),
+      securityGroupId: core.getInput('security-group-id'),
       preRunnerScript: core.getInput('pre-runner-script'),
     };
 
